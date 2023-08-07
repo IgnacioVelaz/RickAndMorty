@@ -1,0 +1,110 @@
+/*=========
+==== Reset ====
+===========*/
+
+img{
+    max-width: 100%;
+}
+
+
+/* Custom Fonts*/
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../assets/fonts/GetSchwifty/GetSchwifty-Regular.woff2') format('woff2'),
+        url('../assets/fonts/GetSchwifty/GetSchwifty-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+/*=======================
+==== Custom Properties ====
+========================*/
+:root{
+    /* Colors */
+    --clr-primary: #97ce4c ;
+    --clr-secondary: /*#b6d2e8*/ #00b5cc;
+    --clr-white: #fff;
+    --clr-black: #000;
+
+    /* Fonts */
+    --ff-title: 'Get Schwifty';
+    --ff-body: sans-serif;
+}
+
+
+body{
+    color: var(--clr-black);
+}
+
+main{
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+.header{
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.996) 100%);
+    background-image: url('../assets/images/nebula.jpg');
+    background-blend-mode: overlay;
+}
+
+.header__title{
+    font-family: var(--ff-title);
+    color: var(--clr-secondary);
+    text-shadow: 3px 3px 4px rgba(178, 223, 40, 1),-2px 1px 4px rgba(178, 223, 40, 1);
+    letter-spacing: -.05em;
+}
+
+.text--big{
+    font-size: 1.5em;
+}
+
+.text--small{
+    font-size: .75em;
+}
+
+
+/* Portal */
+
+.portal{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.portal__img{
+    width: 60px;
+    border-radius: 50%;
+
+    animation-name:radioactive-glow;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+
+/* SideBar */
+
+.side-bar{
+    background-color: #000000b9;
+    background-image: url('../assets/images/nebula.jpg');
+    background-blend-mode: overlay;
+    -webkit-box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
+    
+}
+
+
+
+/* Animation Keyframes */
+
+@keyframes radioactive-glow{
+    from{box-shadow:0px 0px 5px var(--clr-primary),0px 0px 5px var(--clr-primary);}
+    to{box-shadow:0px 0px 20px var(--clr-primary),0px 0px 20px var(--clr-primary);}
+  }
