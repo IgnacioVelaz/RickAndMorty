@@ -91,6 +91,8 @@ main{
 /* SideBar */
 
 .side-bar{
+    color: var(--clr-white);
+
     background-color: #000000b9;
     background-image: url('../assets/images/nebula.jpg');
     background-blend-mode: overlay;
@@ -98,6 +100,12 @@ main{
     -moz-box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
     
+}
+
+.navBar__episode__btn{
+    background: none;
+    border: none;
+    color: inherit;
 }
 
 
