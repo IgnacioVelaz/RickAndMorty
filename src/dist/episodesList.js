@@ -17,6 +17,7 @@ export class EpisodesList {
         return __awaiter(this, void 0, void 0, function* () {
             const episodesData = yield api.getEpisodesData();
             const episodesList = episodesData.map(episode => new Episode(episode));
+            episodesList.forEach(episode => this.renderedEpisodes.push(episode));
             return episodesList;
         });
     }

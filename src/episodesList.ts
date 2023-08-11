@@ -14,6 +14,7 @@ export class EpisodesList implements EpisodesListInterface{
     async createEpisodesObjects(api:ApiInterface): Promise<EpisodeInterface[]>{
         const episodesData = await api.getEpisodesData()
         const episodesList = episodesData.map(episode=> new Episode(episode))
+        episodesList.forEach(episode => this.renderedEpisodes.push(episode))
         return episodesList
     }
 }
